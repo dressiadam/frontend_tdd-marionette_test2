@@ -11,6 +11,7 @@ var Backbone = require('backbone'),
 		SimpleChat = Backbone.Marionette.View.extend(
 		/** @lends module:views/SimpleChat~SimpleChat.prototype */
 		{
+			_maxChar : 40,
 			ui : {
 				addMessageButton  : '.add_message_button',
 				messageLines      : '.message_lines',
@@ -36,7 +37,7 @@ var Backbone = require('backbone'),
 			 * Validate the current message
 			 */
 			_validateMessage : function(message) {
-				return message.length > 40 ? '' : message;
+				return message.length > this._maxChar ? '' : message;
 			}
 		}
 	);

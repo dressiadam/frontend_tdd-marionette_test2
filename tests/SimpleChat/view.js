@@ -35,7 +35,7 @@ suite('TESTING SIMPLE_CHAT view', function() {
 		assert.lengthOf(Backbone.$(this.simpleChat.ui.messageLines).children(),0);
 	});
 
-	test('test max charaters', function() {
+	test('test max characters', function() {
 		this.simpleChat.$(this.simpleChat.ui.messageInputField)
 			.text('0123456789012345678901234567890123456789');
 		this.simpleChat.$(this.simpleChat.ui.addMessageButton).trigger('click');
